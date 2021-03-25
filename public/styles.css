@@ -45,6 +45,7 @@ body, #root{
 
 #hour, #minute, #second {
     background-color: black;
+    transform-origin: top;
 }
 
 #hour {
@@ -62,5 +63,5 @@ body, #root{
 #second {
     width: 0.125rem;
     height: 22rem;
-    margin-top: 25rem;
+    margin-top: 22rem;
 }

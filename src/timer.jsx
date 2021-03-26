@@ -10,8 +10,6 @@ function Timer() {
 
     const [clock, setTime] = useState(now);
 
-    console.log(clock.split('').filter(Number));
-
     return (
         <div id = "timer">
             <h1 id = 'time'>{clock}</h1>

@@ -1,22 +1,43 @@
-function present() {
+const styles = StyleSheet.create({
+    hour: {
+        transform: translateZ(20deg);
+    },
+    minute: {
 
-    let z = '';
+    },
+    second: {
 
-    setInterval(() => {
-        let time = new Date().toLocaleTimeString();
-        setTime(time);
+    }
+});
 
-        time.split('').filter(Number)
-    
-    }, 1000);
-    
-    const now = new Date().toLocaleTimeString();
 
-    const [clock, setTime] = useState(now);
-}
+<View style={[styles.box, {
+        transform: [{ rotate: "45deg" }]
+    }]}>
+</View>
 
-let hands = {
-    translateZ: 
-}
+const styles = StyleSheet.create({
+    hour: {
+        backgroundColor: 'black',
+        transformOrigin: 'bottom',
+        width: '0.5rem',
+        height: '15rem',
+        marginBottom: '15rem'
+    },
 
-export {present, hands};
+    minute: {
+        backgroundColor: 'black',
+        transformOrigin: 'bottom',
+        width: '0.25rem',
+        height: '20rem',
+        marginBottom: '20rem'
+    },
+
+    second: {
+        backgroundColor: 'black',
+        transformOrigin: 'bottom',
+        width: '0.125rem',
+        height: '22rem',
+        marginBottom: '22rem',
+    }
+});

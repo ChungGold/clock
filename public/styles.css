@@ -47,8 +47,18 @@ body, #root{
     margin-top: 20rem;
 }
 
+#time {
+    font-size: 4rem;
+}
+
 #hour, #minute, #second {
     background-color: black;
+    transform-origin: bottom;
+    border-radius: 50%;
+}
+
+#second {
+    background-color: white;
     transform-origin: bottom;
     border-radius: 50%;
 }

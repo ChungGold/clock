@@ -15,12 +15,12 @@ function Clock() {
         
         switch (time.length){
             case 5:
-                setHour(time[0]*30+time[1]+time[2]*0.5);
+                setHour(time[0]*30+(time[1]*10+time[2])*0.5);
                 setMinute((time[1]*10+time[2])*6);
                 setSecond((time[3]*10+time[4])*6);
                 break;
             case 6:
-                setHour(300+time[1]*30+time[2]+time[3]*0.5);
+                setHour(300+time[1]*30+(time[2]*10+time[3])*0.5);
                 setMinute((time[2]*10+time[3])*6);
                 setSecond((time[4]*10+time[5])*6);
         }

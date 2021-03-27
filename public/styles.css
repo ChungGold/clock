@@ -43,6 +43,10 @@ body, #root{
     border: #6bbe92 solid 0.8rem;
 }
 
+#timer {
+    margin-top: 20rem;
+}
+
 #hour, #minute, #second {
     background-color: black;
     transform-origin: bottom;

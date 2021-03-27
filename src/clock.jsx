@@ -2,61 +2,46 @@ import React, {useState} from "react";
 import Timer from "./timer";
 
 function Clock() {
-    // setInterval(() => {
-    //     let time = new Date().toLocaleTimeString().replace(/\D/g,'').split('');
+    const now = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
 
-    //     switch (time.length) {
-    //         case 5:
-    //             setDeg({
-    //                 hour: transform: `rotateZ('+(time[0])*30+(time[1]+time[2])*0.5+'deg)`,
-    //                 minute: transform: `rotateZ('+(time[1]+time[2])*6+'deg)`,
-    //                 second: transform: `rotateZ('+(time[3]+time[4])*6+'deg)`
-    //             });
-    //             break;
-    //         case 6:
-    //             setDeg({
-    //                 const hour = { transform: `rotateZ('+(300)+(${time[1]})*30+(${time[2]}+${time[3]})*0.5+'deg')`}
-    //                 minute: transform: `rotateZ('+(time[2]+time[3])*6+'deg)`,
-    //                 second: transform: `rotateZ('+(time[4]+time[5])*6+'deg)`
-    //             });
-    //     }
-    // }, 1000);
+    const [hour, setHour] = useState(now);
 
-    // const arr = new Date().toLocaleTimeString().replace(/\D/g,'').split('');
+    const [minute, setMinute] = useState(now);
 
-    // const [deg, setDeg] = useState({
-    //     hour: '',
-    //     minute: '',
-    //     second: ''
-    // });
+    const [second, setSecond] = useState(now);
 
-let time = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
+    setInterval(() => {
+        let time = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
+        setHour(300+time[0]*30+time[1]+time[2]*0.5);
+        setMinute((time[1]*10+time[2])*6);
+        setSecond((time[3]*10+time[4])*6);
+    }, 1000);
 
-let test = time[0]*30+time[1]+time[2]*0.5;
+    const hourHand = {
+        transform: `rotateZ(${hour}deg)`
+    };
 
-const hour = {
-    transform: `rotateZ(${test}deg)`
-};
+    const minuteHand = {
+        transform: `rotateZ(${minute}deg)`
+    };
 
-const minute = {
-    transform: `rotateZ(360deg)`
-};
+    const secondHand = {
+        transform: `rotateZ(${second}deg)`
+    };
 
-const second = {
-    transform: `rotateZ(360deg)`
-};
+    console.log(secondHand);
 
     return (
         <div id = 'clock'>
             <Timer />
             <span id = 'hour' 
-                style = {hour}>
+                style = {hourHand}>
             </span>
             <span id = 'minute' 
-                style = {minute}>
+                style = {minuteHand}>
             </span>
             <span id = 'second'
-                style = {second}>
+                style = {secondHand}>
             </span>
         </div>
     );
@@ -64,3 +49,23 @@ const second = {
 
 export default Clock;
 
+
+// let time = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
+
+// let hour = time[0]*30+time[1]+time[2]*0.5;
+
+// let minute = (time[1]*10+time[2])*6;
+
+// let second = (time[3]*10+time[4])*6;
+
+// const hourHand = {
+//     transform: `rotateZ(${hour}deg)`
+// };
+
+// const minuteHand = {
+//     transform: `rotateZ(${minute}deg)`
+// };
+
+// const secondHand = {
+//     transform: `rotateZ(${second}deg)`
+// };

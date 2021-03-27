@@ -46,22 +46,23 @@ body, #root{
 #hour, #minute, #second {
     background-color: black;
     transform-origin: bottom;
+    border-radius: 50%;
 }
 
 #hour {
-    width: 0.5rem;
+    width: 0.75rem;
     height: 15rem;
     margin-bottom: 15rem;
 }
 
 #minute {
-    width: 0.25rem;
+    width: 0.5rem;
     height: 20rem;
     margin-bottom: 20rem;
 }
 
 #second {
-    width: 0.125rem;
+    width: 0.25rem;
     height: 22rem;
     margin-bottom: 22rem;
 }

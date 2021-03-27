@@ -1,18 +1,6 @@
-const styles = StyleSheet.create({
-    hour: {
-        transform: translateZ(20deg);
-    },
-    minute: {
 
-    },
-    second: {
-
-    }
-});
-
-
-<View style={[styles.box, {
-        transform: [{ rotate: "45deg" }]
+<View style={[styles.hour, {
+        transform: [{ rotateZ: "45deg" }]
     }]}>
 </View>
 

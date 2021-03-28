@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import Timer from "./timer";
 
-function Clock() {
+function Hands() {
     const now = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
 
     const [hour, setHour] = useState(now);
@@ -37,21 +36,6 @@ function Clock() {
     const secondHand = {
         transform: `rotateZ(${second}deg)`
     };
-
-    return (
-        <div id = 'clock'>
-            <Timer />
-            <span id = 'hour' 
-                style = {hourHand}>
-            </span>
-            <span id = 'minute' 
-                style = {minuteHand}>
-            </span>
-            <span id = 'second'
-                style = {secondHand}>
-            </span>
-        </div>
-    );
 }
 
-export default Clock;
+export default Hands;

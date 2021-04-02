@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Timer from "./timer";
+import Marks from "./marks";
 
 function Clock() {
     const now = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
@@ -40,16 +41,17 @@ function Clock() {
 
     return (
         <div id = 'clock'>
+            <Marks />
             <Timer />
-            <span id = 'hour' 
+            <div id = 'hour' 
                 style = {hourHand}>
-            </span>
-            <span id = 'minute' 
+            </div>
+            <div id = 'minute' 
                 style = {minuteHand}>
-            </span>
-            <span id = 'second'
+            </div>
+            <div id = 'second'
                 style = {secondHand}>
-            </span>
+            </div>
         </div>
     );
 }

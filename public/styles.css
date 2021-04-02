@@ -43,6 +43,23 @@ body, #root{
     border: #6bbe92 solid 0.8rem;
 }
 
+#marks-container {
+    width: 775px;
+    height: 775px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.mark {
+    width: 10px;
+    height: 100px;
+    background: black;
+}
+
+
+
 #timer {
     margin-top: 20rem;
 }
@@ -53,12 +70,6 @@ body, #root{
 
 #hour, #minute, #second {
     background-color: black;
-    transform-origin: bottom;
-    border-radius: 50%;
-}
-
-#second {
-    background-color: white;
     transform-origin: bottom;
     border-radius: 50%;
 }
@@ -79,4 +90,6 @@ body, #root{
     width: 0.25rem;
     height: 22rem;
     margin-bottom: 22rem;
+
+    background-color: white;
 }

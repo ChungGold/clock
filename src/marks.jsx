@@ -1,6 +1,6 @@
 function Marks() {
     return (
-        <div id = "marks-container">
+        <div class = "marks-area">
             <div class ='mark'></div>
         </div>
     );

@@ -44,6 +44,16 @@ body, #root{
 }
 
 #marks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 800px;
+    height: 800px;
+}
+
+.marks-area {
+    position: absolute;
     width: 775px;
     height: 775px;
     border-radius: 50%;

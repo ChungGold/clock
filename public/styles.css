@@ -63,9 +63,9 @@ body, #root{
 }
 
 .mark {
-    width: 10px;
-    height: 100px;
-    background: black;
+    width: 2px;
+    height: 30px;
+    background: white;
 }
 
 
@@ -101,5 +101,5 @@ body, #root{
     height: 22rem;
     margin-bottom: 22rem;
 
-    background-color: white;
+    background-color: red;
 }

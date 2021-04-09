@@ -1,6 +1,6 @@
 import Marks from "./marks";
 
-function MarksStyles() {
+const MarksStyles = () => {
     return (
         <div id = "marks-container">
             <Marks />

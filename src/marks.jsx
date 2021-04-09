@@ -1,7 +1,7 @@
-function Marks() {
+const Marks = () => {
     return (
-        <div class = "marks-area">
-            <div class ='mark'></div>
+        <div className = "marks-area">
+            <div className ='mark'></div>
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Timer() {
+const Timer = () => {
     setInterval(() => {
         let time = new Date().toLocaleTimeString();
         setTime(time);

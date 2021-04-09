@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Hands() {
+const Hands = () => {
     const now = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
 
     const [hour, setHour] = useState(now);

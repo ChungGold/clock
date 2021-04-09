@@ -1,6 +1,6 @@
-function Alarm() {
+const Alarm = () => {
     return (
-        <div class = "alarm-container"></div>
+        <div className = "alarm-container"></div>
     );
 }
 

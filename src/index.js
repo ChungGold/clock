@@ -1,10 +1,5 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import App from "./app";
-
-ReactDOM.render(
-    <App />
-, document.getElementById("root"));
 
 let mark = document.getElementsByClassName('marks-area');
 
@@ -15,3 +10,7 @@ for (let i = 0; i < mark.length; i++) {
         mark[i].firstElementChild.style.width = '5px';
     }
 }
+
+ReactDOM.render(
+    <App />
+, document.getElementById("root"));

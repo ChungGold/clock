@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Timer from "./timer";
 import MarksStyles from "./marksContain";
 
-function Clock() {
+const Clock = () => {
     const now = new Date().toLocaleTimeString().replace(/\D/g,'').split('').map(Number);
 
     const [hour, setHour] = useState(now);
@@ -24,6 +24,9 @@ function Clock() {
                 setHour(300+time[1]*30+(time[2]*10+time[3])*0.5);
                 setMinute((time[2]*10+time[3])*6);
                 setSecond((time[4]*10+time[5])*6);
+                break;
+            default:
+                console.log("error in switch statement. clock.jsx");
         }
     }, 1000);
 
